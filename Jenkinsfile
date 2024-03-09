@@ -27,7 +27,7 @@ steps {
       sh "chmod -R 777 /var/www/html/index.html"
       sh "wget https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war /mnt/apache-tomcat-9.0.86/webapps/"
       sh "chmod -R 777 /mnt/apache-tomcat-9.0.86/webapps/sample.war"
-      sudo bash -c "cd /mnt/apache-tomcat-9.0.86/bin/ && ./startup.sh " 
+      sh "cd /mnt/apache-tomcat-9.0.86/bin/ && ./startup.sh " 
 
   }
   }
