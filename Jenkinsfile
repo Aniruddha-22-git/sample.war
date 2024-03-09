@@ -25,7 +25,7 @@ steps {
       //sh "touch  /mnt/h"
       sh "cp -r /mnt/sample/index.html /var/www/html"
       sh "chmod -R 777 /var/www/html/index.html"
-      sh "wget https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war /mnt/apache-tomcat-9.0.86/webapps"
+      sh "wget -O /mnt/apache-tomcat-9.0.86/webapps/sample.war https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war"
       sh "chmod -R 777 /mnt/apache-tomcat-9.0.86/webapps/sample.war"
       sh "cd /mnt/apache-tomcat-9.0.86/bin/ && ./startup.sh " 
 
