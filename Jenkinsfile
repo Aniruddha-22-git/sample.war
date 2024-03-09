@@ -20,7 +20,7 @@ steps {
     }*/
   stage('game1'){
     steps {
-      sh "yu install httpd -y "
+      sh "yum install httpd -y "
       sh "service httpd start "
 	    sh "touch hii "
      // sh "mvn install"
