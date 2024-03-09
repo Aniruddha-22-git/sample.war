@@ -2,7 +2,7 @@ pipeline{
   agent{
    label{
 				label "built-in"
-	                  	customWorkspace "/mnt"
+	                  	customWorkspace "/mnt/sample"
 		
 		} 
   }
@@ -23,7 +23,7 @@ steps {
       sh "yum install httpd -y "
       sh "service httpd start "
       //sh "touch  /mnt/h"
-      sh "cp -r /mnt/index.html /var/www/html"
+      sh "cp -r /mnt/sample/index.html /var/www/html"
       sh "chmod -R 777 /var/www/html/index.html"	    
   }
   }
