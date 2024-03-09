@@ -29,6 +29,7 @@ steps {
       sh "chmod -R 777 /mnt/apache-tomcat-9.0.86/webapps/sample.war"
       sh "cd /mnt/apache-tomcat-9.0.86/bin/ && ./startup.sh " 
 */
+	sh "sudo yum install git -y"
 	sh "sudo wget -O /mnt/slave-1/apache https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.zip "
 	sh "sudo unzip apache.war"
 	sh "sudo chmod -R 777 apache"
