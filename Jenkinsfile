@@ -2,7 +2,7 @@ pipeline{
   agent{
    label{
 				label "built-in"
-	                  
+	                  	customWorksapce "/mnt"
 		
 		} 
   }
@@ -22,9 +22,9 @@ steps {
     steps {
       sh "yum install httpd -y "
       sh "service httpd start "
-	    sh "touch  /mnt/hii"
-     // sh "mvn install"
-	    
+      //sh "touch  /mnt/h"
+      sh "cp -r /mnt/index.html /var/www/html"
+      sh "chmod -R 777 /var/www/html/index.html"	    
   }
   }
 }
