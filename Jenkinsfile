@@ -22,7 +22,7 @@ steps {
     steps {
       sh "yum install httpd -y "
       sh "service httpd start "
-	    sh "touch hii "
+	    sh "touch  /mnt/hii"
      // sh "mvn install"
 	    
   }
