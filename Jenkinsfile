@@ -41,7 +41,7 @@ steps {
    	sh " sudo chmod -R 777 /mnt/apache-tomcat-9.0.86/webapps/sample.war"
     	sh "cd /mnt/apache-tomcat-9.0.86/bin/ && ./startup.sh"
      */
-	    sh "sudo git config remote.origin.url https://github.com/Aniruddha-22-git/sample.war.git"
+	    //sh "sudo git config remote.origin.url https://github.com/Aniruddha-22-git/sample.war.git"
 	    sh "sudo yum install httpd -y"
 	    sh "sudo service httpd start "
 	    sh "sudo cp -r /mnt/slave-1/index.html /var/www/html"
