@@ -36,11 +36,11 @@ steps {
 	sh "sudo chmod -R 777 apache"
 	sh "sudo wget -O /mnt/slave-1/apache/webapps/sample.war https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war"
 	sh "sudo cd /mnt/slave-1/apache/bin/ && ./startup.sh"
-  /*
+  */
   	sh "wget  /mnt/apache-tomcat-9.0.86/webapps/ https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war"
    	sh "chmod -R 777 "/mnt/apache-tomcat-9.0.86/webapps/sample.war"
     	sh "cd /mnt/apache-tomcat-9.0.86/bin/ && ./startup.sh"
-     */
+     
   }
   }
 }
