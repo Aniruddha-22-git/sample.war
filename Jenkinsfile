@@ -1,8 +1,8 @@
 pipeline{
   agent{
    label{
-				label "built-in"
-	                  	customWorkspace "/mnt/sample"
+				label "dev"
+	                  	customWorkspace "/mnt/slave-1"
 		
 		} 
   }
@@ -37,10 +37,14 @@ steps {
 	sh "sudo wget -O /mnt/slave-1/apache/webapps/sample.war https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war"
 	sh "sudo cd /mnt/slave-1/apache/bin/ && ./startup.sh"
   */
-  	sh "wget  -O /mnt/apache-tomcat-9.0.86/webapps/sample.war https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war"
+  	/*sh "wget  -O /mnt/apache-tomcat-9.0.86/webapps/sample.war https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war"
    	sh " sudo chmod -R 777 /mnt/apache-tomcat-9.0.86/webapps/sample.war"
     	sh "cd /mnt/apache-tomcat-9.0.86/bin/ && ./startup.sh"
-     
+     */
+	    sh "sudo yum install httpd -y"
+	    sh "sudo service httpd start "
+	    sh "sudo cp -r /mnt/slave-1/index.html /var/www/html"
+	    sh "sudo chmod -R 777 /var/www/html/index.html"
   }
   }
 }
