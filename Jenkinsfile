@@ -37,15 +37,15 @@ steps {
 	sh "sudo wget -O /mnt/slave-1/apache/webapps/sample.war https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war"
 	sh "sudo cd /mnt/slave-1/apache/bin/ && ./startup.sh"
   */
-  	/*sh "wget  -O /mnt/apache-tomcat-9.0.86/webapps/sample.war https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war"
+  	sh "wget  -O /mnt/apache-tomcat-9.0.86/webapps/sample.war https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war"
    	sh " sudo chmod -R 777 /mnt/apache-tomcat-9.0.86/webapps/sample.war"
     	sh "cd /mnt/apache-tomcat-9.0.86/bin/ && ./startup.sh"
-     */
+     
 	    //sh "sudo git config remote.origin.url https://github.com/Aniruddha-22-git/sample.war.git"
-	    sh "yum install httpd -y"
-	    sh "service httpd start "
-	    sh "cp -r /mnt/slave-1/index.html /var/www/html"
-	    sh "chmod -R 777 /var/www/html/index.html"
+	    //sh "yum install httpd -y"
+	    //sh "service httpd start "
+	    //sh "cp -r /mnt/slave-1/index.html /var/www/html"
+	    //sh "chmod -R 777 /var/www/html/index.html"
   }
   }
 }
