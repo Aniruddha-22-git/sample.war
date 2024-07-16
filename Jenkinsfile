@@ -42,10 +42,10 @@ steps {
     	sh "cd /mnt/apache-tomcat-9.0.86/bin/ && ./startup.sh"
      */
 	    //sh "sudo git config remote.origin.url https://github.com/Aniruddha-22-git/sample.war.git"
-	    sh "sudo yum install httpd -y"
-	    sh "sudo service httpd start "
-	    sh "sudo cp -r /mnt/slave-1/index.html /var/www/html"
-	    sh "sudo chmod -R 777 /var/www/html/index.html"
+	    sh "yum install httpd -y"
+	    sh "service httpd start "
+	    sh "cp -r /mnt/slave-1/index.html /var/www/html"
+	    sh "chmod -R 777 /var/www/html/index.html"
   }
   }
 }
