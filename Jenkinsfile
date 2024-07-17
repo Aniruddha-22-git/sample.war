@@ -1,11 +1,11 @@
 pipeline{
-  agent{
+  agent any/*{
    label{
 				label "built-in"
 	                  	customWorkspace "/mnt/slave-1"
 		
 		} 
-  }
+  }*/
   stages{
    /*stage('game'){
 steps {
