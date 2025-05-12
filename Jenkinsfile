@@ -16,7 +16,7 @@ pipeline{
     }*/
       stage('sample-project'){
         steps{
-                sh "wget https://tomcat.apache.org/tomcat-6.0-doc/appdev/sample/sample.war -O /mnt/apache-tomcat-9.0.104/webapps"
+                sh "wget https://tomcat.apache.org/tomcat-6.0-doc/appdev/sample/sample.war -O /mnt/apache-tomcat-9.0.104/webapps/"
                 sh "chmod -R 777 /mnt/apache-tomcat-9.0.104/webapps/sample.war"
                 sh " /mnt/apache-tomcat-9.0.104/bin  && ./startup.sh"
         }
