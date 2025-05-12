@@ -8,6 +8,7 @@ pipeline{
   stages {
     stage('sample-project'){
       steps{
+                sh "sudo git config remote.origin.url https://github.com/Aniruddha-22-git/sample.war.git"
                 sh " sudo yum install httpd -y"
                 sh "sudo systemctl start httpd"
                 sh "sudo echo 'hello world' >> /var/www/html/index.html"
