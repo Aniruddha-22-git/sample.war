@@ -1,10 +1,10 @@
 pipeline{
-  agent any{
+  agent /*{
     label{
                 label "built-in"
                 customWorkspace "/mnt/slave"
     }
-  }
+  }*/
   stages {
     stage('sample-project'){
       steps{
