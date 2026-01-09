@@ -16,7 +16,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // This will now work because jenkins owns /mnt/apache-deploy
-                git branch: 'main', url: 'https://github.com/Aniruddha-22-git/sample.war.git'
+                //git branch: 'main', url: 'https://github.com/Aniruddha-22-git/sample.war.git'
             }
         }
         stage('Deploy') {
@@ -24,7 +24,7 @@ pipeline {
                 // Copy the index.html to the web server path
                 // Note: Ubuntu uses /var/www/html, RHEL/CentOS uses the same
                 sh "sudo cp index.html /var/www/html/index.html"
-                sh "sudo chmod 644 /var/www/html/index.html"
+                sh "sudo chmod 777 /var/www/html/index.html"
                 
                 // Restart/Start the service
                 sh "sudo systemctl restart apache2 || sudo systemctl restart httpd"
