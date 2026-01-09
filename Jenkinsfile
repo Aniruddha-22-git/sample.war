@@ -10,7 +10,7 @@ pipeline {
         stage('Install Apache') {
             steps {
                 // Determine if we need 'apache2' (Ubuntu) or 'httpd' (RHEL/CentOS)
-                sh "sudo apt-get update && sudo apt-get install -y apache2 || sudo yum install -y httpd"
+                sh "sudo apt-get update && sudo apt-get install -y apache2"
             }
         }
         /*stage('Checkout Code') {
@@ -27,7 +27,7 @@ pipeline {
                 sh "sudo chmod 777 /var/www/html/index.html"
                 
                 // Restart/Start the service
-                sh "sudo systemctl restart apache2 || sudo systemctl restart httpd"
+                sh "sudo systemctl restart apache2 "
             }
         }
     }
