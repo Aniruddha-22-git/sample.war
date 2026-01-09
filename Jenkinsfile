@@ -10,9 +10,9 @@ pipeline{
       steps{
                 //sh "sudo git clone https://github.com/Aniruddha-22-git/sample.war.git /mnt/slave-1"
                 
-                sh " sudo apt install apache2 -y"
+                sh "sudo apt install apache2 -y"
                 sh "sudo systemctl start apache2"
-                sh "sudo echo 'hello world' >> /var/www/html/index.html"
+                //sh "sudo echo 'hello world' >> /var/www/html/index.html"
                 sh "sudo chmod -R 777 /var/www/html/index.html"
       }
     }
