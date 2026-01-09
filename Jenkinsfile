@@ -1,16 +1,16 @@
 pipeline{
   agent {
     label{
-                label "dev"
-                customWorkspace "/mnt/slave-1"
+                label "Built-in"
+                customWorkspace "/mnt"
     }
   }
   stages {
     stage('sample-project'){
       steps{
-                sh "sudo git clone https://github.com/Aniruddha-22-git/sample.war.git /mnt/slave-1"
+                //sh "sudo git clone https://github.com/Aniruddha-22-git/sample.war.git /mnt/slave-1"
                 
-                sh " sudo yum install httpd -y"
+                sh " sudo apt install httpd -y"
                 sh "sudo systemctl start httpd"
                 sh "sudo echo 'hello world' >> /var/www/html/index.html"
                 sh "sudo chmod -R 777 /var/www/html/index.html"
