@@ -13,12 +13,12 @@ pipeline {
                 sh "sudo apt-get update && sudo apt-get install -y apache2 || sudo yum install -y httpd"
             }
         }
-        stage('Checkout Code') {
+        /*stage('Checkout Code') {
             steps {
                 // This will now work because jenkins owns /mnt/apache-deploy
                 //git branch: 'main', url: 'https://github.com/Aniruddha-22-git/sample.war.git'
             }
-        }
+        }*/
         stage('Deploy') {
             steps {
                 // Copy the index.html to the web server path
